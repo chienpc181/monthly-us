@@ -1,0 +1,15 @@
+<div >
+    
+    <div class="header">
+        <h2 ng-click="gotoBudget()">{{ budget.category }}</h2>
+        
+        <span class="mt-4"> 
+            
+            {{ budget.amount | currency:"đ":"0"}}
+        </span>
+        <h1 style="color: greenyellow; font-weight: bold;" ng-click="addTransaction()">+</h1>
+    </div>
+    <span>used: {{budget.used | currency:"đ":"0"}}</span>
+    <progress ng-value="budget.used" max="{{budget.amount }}"></progress>
+    <span class="remain">remain: {{budget.remain | currency:"đ":"0"}}</span>
+</div>

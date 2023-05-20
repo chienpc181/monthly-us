@@ -1,3 +1,4 @@
+var template = require('./templates/budget-card.html');
 angular.module('monthlyUs')
     .directive('budgetCard', function() {
         return {
@@ -5,7 +6,8 @@ angular.module('monthlyUs')
             scope: {
                 budget: '=',
             },
-            templateUrl: 'directives/templates/budget-card.html',
+            // templateUrl: 'directives/templates/budget-card.html',
+            template: template.default,
             controller: function($scope, $location, $mdDialog, $http) {
                 const budgetId = $scope.budget._id;
                 // console.log(budgetId);
@@ -46,7 +48,7 @@ angular.module('monthlyUs')
                         $http({
                             method: 'POST',
                             // url: "http://localhost:3000/api/transactions",
-                            url: "http://monthly-us-be.vercel.app/api/transactions",
+                            url: "https://monthly-us-be.vercel.app/api/transactions",
                             data: {
                                 budgetId: budgetId,
                                 amount: $scope.transaction.amount,

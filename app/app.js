@@ -19,7 +19,7 @@ monthlyUs.controller('HomeController', function($scope, $http) {
     $http({
         method: "GET",
         // url: "http://localhost:3000/api/budgets",
-        url: "http://monthly-us-be.vercel.app/api/budgets",
+        url: "https://monthly-us-be.vercel.app/api/budgets",
         params: {
             period: currentPeriod
         }
@@ -45,7 +45,7 @@ monthlyUs.controller('budgetViewController', function($scope, $routeParams, $htt
     $http({
         method: "GET",
         // url: "http://localhost:3000/api/transactions",
-        url: "http://monthly-us-be.vercel.app/api/transactions",
+        url: "https://monthly-us-be.vercel.app/api/transactions",
         params: {
             budgetId: $routeParams.id
         }
@@ -86,7 +86,7 @@ monthlyUs.controller('budgetViewController', function($scope, $routeParams, $htt
             $http({
                 method: 'POST',
                 // url: "http://localhost:3000/api/transactions",
-                url: "http://monthly-us-be.vercel.app/api/transactions",
+                url: "https://monthly-us-be.vercel.app/api/transactions",
                 data: {
                     budgetId: $routeParams.id,
                     amount: $scope.transaction.amount,

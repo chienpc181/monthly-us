@@ -1,3 +1,4 @@
+var template = require('./templates/total-card.html');
 angular.module('monthlyUs')
     .directive('totalCard', function() {
         return {
@@ -5,7 +6,7 @@ angular.module('monthlyUs')
             scope: {
                 category: '=',
             },
-            templateUrl: 'directives/templates/total-card.html',
+            template: template.default,
             controller: function($scope) {
                 $scope.testButton = () => {
                     alert('total');

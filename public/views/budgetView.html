@@ -1,0 +1,17 @@
+<div class="main-body" id="popupContainer">
+    <md-button ng-click="addTransaction()" class="md-raised md-primary"> Add </md-button>
+
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="item in transactions" ng-click="null">
+            <div class="md-list-item-text" layout="column">
+                <h3>{{ item.reason }}</h3>
+                <h4>{{ item.amount | currency:"đ":"0"}}</h4>
+                <p>{{ item.description }}</p>
+                <p>{{ item.time }}</p>
+            </div>
+            <md-divider></md-divider>
+          </md-list-item>
+    </md-list>
+    
+</div>
+

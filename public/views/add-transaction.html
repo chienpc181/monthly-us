@@ -1,0 +1,39 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form >
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>New Transaction</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+            <!-- <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon> -->
+            <p style="color: red;">x</p>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-dialog-content style="min-width: 400px; min-height: 200px; display: block; margin: 20px;">
+        <md-input-container style="display: block;">
+            <label>Amount</label>
+            <!-- <md-icon md-font-icon="fa fa-money"></md-icon> -->
+            <input required type="number" ng-pattern='\\d+' ng-model="transaction.amount">
+        </md-input-container>
+        <md-input-container style="display: block;">
+            <label>Reason</label>
+            <input required ng-model="transaction.reason">
+        </md-input-container>
+        <md-input-container style="display: block;">
+            <label>Description</label>
+            <input ng-model="transaction.description">
+        </md-input-container>
+      </md-dialog-content>
+  
+      <md-dialog-actions layout="row">
+        <span flex></span>
+        <md-button class="md-raised" ng-click="cancel()" >
+          Cancel
+        </md-button>
+        <md-button class="md-raised md-primary" ng-click="ok()" style="margin-right:20px;" >
+          Ok
+        </md-button>
+      </md-dialog-actions>
+    </form>
+  </md-dialog>

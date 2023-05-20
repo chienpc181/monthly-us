@@ -1,5 +1,22 @@
 {
   "dependencies": {
-    "angular-material": "^1.2.5"
+    "@angular/animations": "^16.0.2",
+    "angular": "^1.8.2",
+    "angular-http-server": "^1.8.1",
+    "angular-material": "^1.2.5",
+    "angular-messages": "^1.8.3",
+    "angular-route": "^1.8.2",
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development"
   }
 }
